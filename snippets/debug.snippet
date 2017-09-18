@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>debug</Title>
+			<Shortcut>debug</Shortcut>
+			<Description>Code snippet for an automatically implemented debug
+Language Version: C# 3.0 or higher</Description>
+			<Author>gromadskyi</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>message</ID>
+					<ToolTip>Message for writing to output</ToolTip>
+					<Default>Message</Default>
+				</Literal>
+				<Literal>
+					<ID>namespace</ID>
+					<ToolTip>Debug Namespace</ToolTip>
+					<Default>Debug</Default>
+					<Function>SimpleTypeName(global::System.Diagnostics.Debug)</Function> 
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[$namespace$.WriteLine("$message$");$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
