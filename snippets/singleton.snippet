@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>singleton</Title>
+			<Shortcut>singleton</Shortcut>
+			<Description>Code snippet for an automatically implemented Singleton pattern
+Language Version: C# 3.0 or higher</Description>
+			<Author>gromadskyi</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+		#region Singleton Implementation
+		
+		private static readonly Lazy<$type$> lazyInstance = new Lazy<$type$>(() => new $type$(), true);
+
+        private $type$()
+        {
+        }
+
+        public static $type$ Instance
+        {
+            get { return lazyInstance.Value; }
+        }
+
+		#endregion
+		$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
